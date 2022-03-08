@@ -1,0 +1,77 @@
+*{
+
+	margin:0;
+	padding: 0;
+	text-decoration: nome;
+	font-family: montserrat;
+}
+
+body{
+	min-height: 150vh;
+	background-color: #e4605e;
+}
+
+.cabecalho{
+	width: 600px;
+	background: #f1f1f1;
+	height: 400;
+	padding: 10px 40px;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	top: 135%;
+	transform: translate(-50%,-50%);
+
+}
+.txtb input s{
+	border: none;
+	outline: none;
+	background:none;
+	padding: 0 5px;
+
+}
+
+.txtb input radio{
+	border: none;
+	outline: none;
+	background:none;
+	padding: 0 5px;
+
+}
+
+.logbtn{
+display: block;
+width: 50%;
+height: 50px;
+background-color:#e4605e;
+background-size: 200%;
+color: white;
+
+}
+
+.data{
+	border: none;
+	outline: none;
+	background:none;
+	padding: 0 5px;
+
+
+	}
+
+textarea{
+
+	width: 618px;
+	height: 277px;
+}
+
+span{
+font-size: 12px;
+width: 50%;
+height: 50px;
+color: red;
+}
+
+label{
+	color: black;
+}
+

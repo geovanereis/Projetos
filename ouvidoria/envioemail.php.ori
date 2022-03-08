@@ -1,0 +1,58 @@
+<?php 
+
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+define('GUSER', 'geovane@gsreisservicos.com');   // <-- Insira aqui o seu GMail
+define('GPWD', '061025mm');               // <-- Insira aqui a senha do seu GMail
+
+
+$email = new PHPMailer();
+
+$email->IsSMTP();
+
+$email->Charset = 'UTF-8';
+
+$email->SMTPAuth = true;
+$email->SMTPSecure = 'ssl';
+
+//servidor de E-ail
+$email->Host = 'br466.hostgator.com.br';
+
+$email->Port = 465;
+
+$email->Username = GUSER;
+$email->Password = GPWD;
+
+$email->From = GUSER;
+
+$email->FromName = 'Ouvidoria Dunorte';
+
+$email->Subject = 'Formulario de ouvidoria';
+
+$email->Body = 'Segue anexo formulario! <br><br><br><br> N&atilde;o responder este E-mail';
+
+//$file = 'ouvidoria/ouvidoria/documento.pdf';
+
+//$anexo->AddAttachment('PDF/document.pdf', 'PDF/*.pdf');
+
+$email->AltBody = 'E-mail em texto';
+
+$email->AddAddress('geovane@gsreisservicos.com');
+
+if(!$email->Send()) {
+                $error = 'Mail error: '.$email->ErrorInfo;
+                return false;
+        } else {
+                $error = 'Mensagem enviada!';
+                //unlink(1);
+                return true;
+        }
+
+
+?>
